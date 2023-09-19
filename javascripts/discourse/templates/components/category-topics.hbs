@@ -1,20 +1,19 @@
 {{category-link category}}
 
-<!--{{#conditional-loading-spinner condition=isLoading}}-->
 
-  <div class="category-topics--content">
+<div class="category-topics--content">
   {{#each topics as |topic|}}
-      <a href={{topic.url}} class="category-topics--topic">
-        {{html-safe (replace-emoji topic.fancy_title)}}
-        <span class="category-topics--posts-count">
+    <a href={{topic.url}} class="category-topics--topic">
+      {{html-safe (replace-emoji topic.fancy_title)}}
+      <span class="category-topics--posts-count">
 
       </span>
-      </a>
+    </a>
   {{/each}}
-  </div>
+</div>
+
 <div class="category-topics--content2">
   {{topic-list topics=topics showPosters=false}}
 </div>
 
-<!--{{/conditional-loading-spinner}}-->
 
