@@ -17,5 +17,8 @@ zh_CN:
     heading: "子类别"
   top_topics:
     heading: "热门话题"
+  showcased_categories:
+    new_post: "新建该类话题"
+    view_more: "更多..."
   category_list:
     heading: "类别"

@@ -11,5 +11,8 @@ en:
     heading: "Subcategories"
   top_topics:
     heading: "Top topics"
+  showcased_categories:
+    new_post: "New Post"
+    view_more: "More..."
   category_list:
     heading: "Categories"

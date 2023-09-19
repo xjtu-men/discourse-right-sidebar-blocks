@@ -40,6 +40,18 @@ export default class CategoryTopics extends Component {
     });
 
   }
+  @action
+  createTopic() {
+    if (this.currentUser) {
+      getOwner(this).lookup("controller:composer").open({
+        action: "createTopic",
+        draftKey: "createTopic",
+        categoryId: this.category.id,
+      });
+    } else {
+      this.router.transitionTo("login");
+    }
+  }
 
   willDestroy() {
     this.topics = null;

@@ -1,5 +1,13 @@
 {{category-link category}}
 
+<!--{{#d-button action=createTopic class="btn-primary btn"}}-->
+<!--  {{theme-i18n "category_topics.new_post"}}-->
+<!--{{/d-button}}-->
+
+<a href={{moreHref}} class="btn btn-more">
+  {{theme-i18n "category_topics.view_more"}}
+</a>
+
 {{#conditional-loading-spinner condition=isLoading}}
 
   <div class="category-topics--content">
