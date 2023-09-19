@@ -21,9 +21,9 @@ export default class CategoryTopics extends Component {
 
     const filter = "c/" + categoryId;
     this.category = Category.findById(categoryId);
+    this.store.set("isLoading", true);
 
     this.store.findFiltered("topicList", { filter }).then((result) => {
-      this.isLoading = false;
 
       const results = result.topic_list.topics;
 
@@ -35,7 +35,7 @@ export default class CategoryTopics extends Component {
       });
 
       this.topics = results.slice(0, count);
-      this.isLoading = false;
+      this.store.set("isLoading", false);
 
     });
 
