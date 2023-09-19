@@ -18,7 +18,7 @@ export default class CategoryTopics extends Component {
     if (!categoryId) {
       return;
     }
-    this.set("isLoading", true);
+    this.store.set("isLoading", true);
 
     const filter = "c/" + categoryId;
     this.category = Category.findById(categoryId);
@@ -32,9 +32,8 @@ export default class CategoryTopics extends Component {
           topic.url += `/${topic.last_read_post_number}`;
         }
       });
-
       this.topics = results.slice(0, count);
-      this.set("isLoading", false);
+      this.store.set("isLoading", false);
 
     });
   }
