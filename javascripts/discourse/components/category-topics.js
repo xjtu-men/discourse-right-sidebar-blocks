@@ -12,12 +12,13 @@ export default class CategoryTopics extends Component {
 
   constructor() {
     super(...arguments);
-    const count = this.args?.params?.count || 10;
+    const count = this.args?.params?.count || settings.max_list_length;
     const categoryId = this.args?.params?.id;
 
     if (!categoryId) {
       return;
     }
+    this.set("isLoading", true);
 
     const filter = "c/" + categoryId;
     this.category = Category.findById(categoryId);
@@ -33,6 +34,8 @@ export default class CategoryTopics extends Component {
       });
 
       this.topics = results.slice(0, count);
+      this.set("isLoading", false);
+
     });
   }
 
