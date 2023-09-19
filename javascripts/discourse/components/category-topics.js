@@ -24,13 +24,14 @@ export default class CategoryTopics extends Component {
     this.store.set("isLoading", true);
 
     this.store.findFiltered("topicList", { filter }).then((result) => {
-      this.topicList = result.topic_list.topics.slice(0, count);
-      // results.forEach((topic) => {
-      //   topic.url = `${getURL("/t/")}${topic.slug}/${topic.id}`;
-      //   if (topic.last_read_post_number > 0) {
-      //     topic.url += `/${topic.last_read_post_number}`;
-      //   }
-      // });
+      const results = result.topic_list.topics.slice(0, count);
+      results.forEach((topic) => {
+        topic.url = `${getURL("/t/")}${topic.slug}/${topic.id}`;
+        if (topic.last_read_post_number > 0) {
+          topic.url += `/${topic.last_read_post_number}`;
+        }
+      });
+      this.topicList = results
       this.store.set("isLoading", false);
     });
   }
