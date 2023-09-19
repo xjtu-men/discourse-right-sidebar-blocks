@@ -19,15 +19,12 @@ export default class CategoryTopics extends Component {
       return;
     }
 
-    const filter = {
-      filter: "latest",
-      params: {
-        category: categoryId,
-      },
-    };
+    const filter = "c/" + categoryId;
+    this.category = Category.findById(categoryId);
     this.store.set("isLoading", true);
-    this.store.findFiltered("topicList", { filter }).then((topicList) => {
-      this.topicList = topicList.topics.slice(0, count);
+
+    this.store.findFiltered("topicList", { filter }).then((result) => {
+      this.topicList = result.topic_list.topics.slice(0, count);
       // results.forEach((topic) => {
       //   topic.url = `${getURL("/t/")}${topic.slug}/${topic.id}`;
       //   if (topic.last_read_post_number > 0) {
