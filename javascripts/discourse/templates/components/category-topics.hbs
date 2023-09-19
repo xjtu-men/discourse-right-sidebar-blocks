@@ -1,9 +1,5 @@
 {{category-link category}}
 
-<!--<a href={{moreHref}} class="btn btn-more">-->
-<!--  {{theme-i18n "category_topics.view_more"}}-->
-<!--</a>-->
-
 {{#conditional-loading-spinner condition=isLoading}}
 
   <div class="category-topics--content">
@@ -15,10 +11,6 @@
       </span>
       </a>
   {{/each}}
-  </div>
-
-  <div class="category-topics--content2">
-  {{topic-list topics=topicList showPosters=false}}
   </div>
 
 {{/conditional-loading-spinner}}

@@ -18,21 +18,24 @@ export default class CategoryTopics extends Component {
     if (!categoryId) {
       return;
     }
+    this.set("isLoading", true);
 
     const filter = "c/" + categoryId;
     this.category = Category.findById(categoryId);
-    this.store.set("isLoading", true);
 
     this.store.findFiltered("topicList", { filter }).then((result) => {
-      const results = result.topic_list.topics.slice(0, count);
+      const results = result.topic_list.topics;
+
       results.forEach((topic) => {
         topic.url = `${getURL("/t/")}${topic.slug}/${topic.id}`;
         if (topic.last_read_post_number > 0) {
           topic.url += `/${topic.last_read_post_number}`;
         }
       });
-      this.topicList = results
-      this.store.set("isLoading", false);
+
+      this.topics = results.slice(0, count);
+      this.set("isLoading", false);
+
     });
   }
 
