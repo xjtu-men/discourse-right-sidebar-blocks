@@ -18,12 +18,13 @@ export default class CategoryTopics extends Component {
     if (!categoryId) {
       return;
     }
-    this.isLoading = true;
 
     const filter = "c/" + categoryId;
     this.category = Category.findById(categoryId);
 
     this.store.findFiltered("topicList", { filter }).then((result) => {
+      this.isLoading = false;
+
       const results = result.topic_list.topics;
 
       results.forEach((topic) => {
