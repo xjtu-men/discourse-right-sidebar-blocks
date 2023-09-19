@@ -34,9 +34,10 @@ export default class CategoryTopics extends Component {
       });
 
       this.topics = results.slice(0, count);
-      this.isLoading = false;
 
     });
+
+    this.isLoading = false;
   }
 
   willDestroy() {
