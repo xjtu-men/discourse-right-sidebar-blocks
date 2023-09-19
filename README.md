@@ -41,3 +41,38 @@ You can control some features for the provided blocks via parameters.
 | excludedGroupNames          | Excludes specified groups             |            | Group names                                      | top-contributors                 |
 | order                       | Orders the contributors               | likes_received | String (likes_received or likes_given)       | top-contributors                 |
 | period                      | Time period for top contributors      | yearly         | all, yearly, quarterly, monthly, weekly, daily   | top-contributors                 |
+
+
+
+
+## xjtu.men config
+category-topics
+id
+11
+
+category-topics
+id
+2
+
+top-contributors
+
+minimal-gamification-leaderboard
+id
+2
+
+popular-tags
+
+custom-html
+content
+<h3 name="get-started-1" class="anchor">链接</h3>     <li><a href="https://m.xjtu.men/">Mastodon 社交: 交大門 <strong>M</strong> </a></li>  <li><a href="https://c.xjtu.live">评课社区: 课程信息与评价</a></li>  <li><a href="https://github.com/xjtumen">Xjtumen Org @ GitHub</a></li>   <li><a href="https://cf.xjtu.live/learning-materials/">学习资料</a></li>    
+
+custom-html
+content
+<h3 name="get-started-1" class="anchor">快速入門</h3> <li><a href="/faq">FAQ</a></li>  <li><a href="/t/topic/4730">开发任务列表</a></li> <li><a href="/t/topic/209">随缘转发宣传海报</a></li> <li><a href="/t/topic/127">功能更新 CHANGE LOG</a></li> <li><a href="/t/topic/4812">学习资料汇总分享平台</a></li> <li><a href="/t/topic/3981">本论坛推荐阅读</a></li> <li><a href="/t/topic/1440">Android App客户端</a></li> <li><a href="/t/topic/4376">知乎：如何看待西安交通大学新 bbs 交大门，高校 bbs 是否注定走向衰亡？</a></li> <li><a href="/t/topic/1503">访问速度慢？用这个链接来检测 网络出口IP 和 连接信息</a></li> <li><a href="/t/topic/1477">关于xjtu.men被Tencent认定为危险网站的声明</a></li>
+
+### others
+top_contributors.heading
+Most liked
+
+also in translation
+Cheers->点数->Karma
