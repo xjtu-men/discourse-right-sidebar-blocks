@@ -18,7 +18,7 @@ export default class CategoryTopics extends Component {
     if (!categoryId) {
       return;
     }
-    this.set("isLoading", true);
+    this.isLoading = true;
 
     const filter = "c/" + categoryId;
     this.category = Category.findById(categoryId);
@@ -34,7 +34,7 @@ export default class CategoryTopics extends Component {
       });
 
       this.topics = results.slice(0, count);
-      this.set("isLoading", false);
+      this.isLoading = false;
 
     });
   }
