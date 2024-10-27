@@ -42,8 +42,9 @@ You can control some features for the provided blocks via parameters.
 | order                       | Orders the contributors               | likes_received | String (likes_received or likes_given)       | top-contributors                 |
 | period                      | Time period for top contributors      | yearly         | all, yearly, quarterly, monthly, weekly, daily   | top-contributors                 |
 
+### Blocks from other plugins
 
-
+The Discourse Calendar plugin comes with a block called `upcoming-events-list` that you can use in conjunction with this component. You'll want to ensure the desired route is enabled via the `events calendar categories` setting in the Calendar plugin settings. The block params use this [syntax](https://momentjs.com/docs/#/displaying/format/), for example `MMMM D, YYYY`.
 
 ## xjtu.men config
 category-topics
@@ -64,7 +65,7 @@ popular-tags
 
 custom-html
 content
-<h3 name="get-started-1" class="anchor">链接</h3>     <li><a href="https://m.xjtu.men/">Mastodon 社交: 交大門 <strong>M</strong> </a></li>  <li><a href="https://c.xjtu.live">评课社区: 课程信息与评价</a></li>  <li><a href="https://github.com/xjtumen">Xjtumen Org @ GitHub</a></li>   <li><a href="https://cf.xjtu.live/learning-materials/">学习资料</a></li>    
+<h3 name="get-started-1" class="anchor">链接</h3>     <li><a href="https://m.xjtu.men/">Mastodon 社交: 交大門 <strong>M</strong> </a></li>  <li><a href="https://c.xjtu.live">评课社区: 课程信息与评价</a></li>  <li><a href="https://github.com/xjtumen">Xjtumen Org @ GitHub</a></li>   <li><a href="https://cf.xjtu.live/learning-materials/">学习资料</a></li>
 
 custom-html
 content
